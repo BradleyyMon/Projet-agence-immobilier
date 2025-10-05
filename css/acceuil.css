@@ -1,0 +1,594 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Nanum Myeongjo;
+}
+/* Pou jere ba navigasyon an*/
+header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #ffffff;
+}
+/*pati sa bay logo an koule */
+header .logo {
+  color: black;
+  font-family: indie flower;
+}
+
+header .logo span {
+  color: #daa755;
+}
+/*fe meni an paret sou menm liy a jere koule, gwose*/
+.menu-nav {
+  display: flex;
+}
+.menu-nav a {
+  font-size: 16px;
+  color: black;
+  padding: 10px 20px;
+}
+
+.menu-nav a:hover {
+  color: #daa755;
+  transform: scale(1, 1);
+}
+
+.nav-icon {
+  display: flex;
+}
+
+.nav-icon i {
+  margin-right: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  transition: all 0.42s ease;
+}
+
+.nav-icon i:hover {
+  color: #daa755;
+  transform: scale(1, 1);
+  font-size: 30px;
+}
+/*espas ki genyen nan mitan chak section*/
+section {
+  padding: 5% 10%;
+}
+/*
+sa jere paj acceuil lan
+m mete on div ki gen pou class bg
+se pou jere opacity paske lem mete direk se tout kontni yo ki pran 
+ni text ni bouton ni backgroung tout jere nan block sa*/
+.acceuil {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.87;
+  z-index: 1;
+}
+.acceuil .tex {
+  margin: 15px 20px 20px 0px;
+  position: relative;
+  z-index: 2;
+}
+.acceuil h5 {
+  color: #daa755;
+  font-size: 20px;
+}
+
+.acceuil p {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: italic;
+  padding: 30px 0px 50px;
+}
+
+.acceuil h2 {
+  color: #daa755;
+  font-size: 55px;
+  text-transform: capitalize;
+  line-height: 1.1;
+  font-weight: 600;
+  padding: 30px 0px 0px;
+}
+
+.acceuil h1 {
+  color: #000000;
+  font-size: 60px;
+  text-transform: capitalize;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 6px 0px 0px;
+}
+
+.btn {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 3px solid black;
+  padding: 12px 25px;
+}
+.btn:hover {
+  background-color: black;
+  color: #daa755;
+  transition: all 0.42s ease;
+  box-shadow: 1px 1px 15px black;
+}
+
+.en-bas {
+  position: absolute;
+  z-index: 2;
+  top: 85%;
+  right: 11%;
+}
+
+.bas i {
+  font-size: 30px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 12px 12px;
+}
+
+.bas i:hover {
+  background-color: black;
+  color: #daa755;
+  transition: all 0.42s ease;
+}
+
+/*pou 2e pati a
+li jere pati ki gen aquisition yo*/
+
+.text h2 {
+  color: black;
+  font-size: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.text h2 span {
+  color: #daa755;
+}
+/*toujou pati 2 a ki fe yo paret
+nan grid lan, sa vle di youn a kote lot 
+epi yo ranje otomatik, si te glis kontni yo tap toujou
+paret depan de tay ekraN AN*/
+.aquisition {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  gap: 3rem;
+}
+.row {
+  position: relative;
+}
+.row img {
+  width: 90%;
+  height: auto;
+  transition: all 0.4s ease;
+}
+.row img:hover {
+  transform: scale(0.9);
+}
+.aquisition .aquis-text {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #000000;
+  padding: 3px 10px;
+  border-radius: 3px;
+  opacity: 50%;
+}
+.favoris {
+  font-size: 20px;
+}
+.favoris:hover {
+  color: red;
+}
+
+/*pou 3e pati a*/
+.acceuil3 {
+  background-color: #f3f4f6;
+}
+.acceuil3 .agent {
+  color: #000000;
+  font-size: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+.acceuil3 .agent span {
+  color: #daa755;
+}
+
+.equipe-texte {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  margin: auto;
+  font-size: 20px;
+}
+.equipe-text {
+  margin-top: 50px;
+}
+.equipe-texte h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.equipe {
+  padding-right: 80px;
+}
+
+/*pou 4e pati a KI GEN avis yo, kom se nou 3 ki nan groupe lan mmete 3
+konsa nou ka mete plis si nou vle ka plis tou*/
+.acceuil4 {
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.acceuil4 h2 {
+  font-size: 2em;
+  color: #daa755;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.client {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+}
+.avis {
+  background-color: #f9f9f9;
+  padding: 10px 10px;
+  border-radius: 10px 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  position: relative;
+  display: grid;
+}
+.avis h4 {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #555;
+}
+
+/*pou 5e pati a ki gen logo ak info yo
+m itilize info pam paskem pat konn sa poum mete*/
+.infos .logo span {
+  color: #daa755;
+}
+.infos .logo {
+  color: black;
+  font-family: indie flower;
+  font-size: 20px;
+  width: 140px;
+  height: auto;
+  margin-top: 40px;
+}
+.infos {
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+}
+.info2,
+.info3,
+.info4 {
+  margin-top: 1rem;
+}
+.infos h4 {
+  color: black;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.infos p {
+  color: #555;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.42s ease;
+}
+.infos p:hover {
+  color: #daa755;
+  transform: scale(1.1);
+}
+.social i {
+  color: #000000;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all 0.42s ease;
+}
+.social i:hover {
+  color: #daa755;
+  transform: scale(1.3);
+}
+
+.en-haut {
+  position: relative;
+  top: 75%;
+  bottom: 0%;
+  left: 100%;
+}
+.haut i {
+  font-size: 30px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 12px 12px;
+}
+
+.haut i:hover {
+  background-color: black;
+  color: #daa755;
+  transition: all 0.42s ease;
+}
+/* Sa se denye pati an ki anba net sa ki gen copyright lan*/
+footer {
+  background-color: #f3f4f6;
+  padding: 20px;
+  text-align: center;
+}
+footer:hover {
+  color: #daa755;
+}
+
+/*tout kote ki gen :hover yo se pou le souri an pase li, gon bagay ki fet
+tankou le yo chanje koule
+tout sa ki komanse pa . yo se class
+sa ki pa gen . yo se balise
+icon yo se sou boxicon m pran yo, m mete lien an nan acceuil.html
+epi m itilize code icon mwen vle an, si pagen internet sou pc yap monte an yo pap monte 
+ni police yo tou
+transform: scale(1.3) fe eleman an bouje lew pase souri sou li
+transition: all .42s ease; fe koule yo pa chanje brit sou kou
+*/
+.team {
+  background-image: url(../images/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+.team .overlay {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.team-card {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  padding: 20px;
+}
+.team-card .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background-color: #6ca0a7ad;
+  margin: 30px 70px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px #daa755;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+}
+.team-card .card:hover {
+  height: 420px;
+}
+.team-card .card .pictures {
+  position: relative;
+  width: 240px;
+  height: auto;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px #555;
+}
+.team-card .card .pictures img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.team-card .card .contenu {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #000000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.team-card .card:hover .contenu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.intro {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+/*A partir de la se css pou page contact la*/
+.contact {
+  height: 100vh;
+  background-image: url(../images/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.formulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 470px;
+  background: #f6f6f600;
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+.form {
+  position: absolute;
+  inset: 3px;
+  border-radius: 8px;
+  background: #ffffff2b;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+.form h2 {
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #553b12;
+}
+.inputBox {
+  position: relative;
+  width: 400px;
+  margin-top: 10px;
+}
+.inputBox input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border-color: #daa755;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1em;
+  outline: none;
+  color: #553b12;
+}
+input[type="submit"] {
+  border: 2px solid rgba(0, 0, 0, 0.211);
+  background: #d09d4d;
+  cursor: pointer;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  height: 50px;
+}
+.inputBox textarea {
+  background: transparent;
+  padding-top: 5px;
+  margin-top: 18px;
+  border: 2px solid #daa755;
+  font-size: 15px;
+  color: #553b12;
+}
+/* partie css pour la page des offres*/
+.enveloppe {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.carte {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  transition: flex 0.5s ease-in-out;
+  cursor: pointer;
+}
+.carte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%) contrast(90%);
+  transition: filter 0.5s ease-in-out;
+}
+.carte:hover {
+  flex: 7;
+}
+.carte:hover img {
+  filter: none;
+}
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carte:hover .text-overlay {
+  opacity: 1;
+}
+.text-overlay h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #daa755;
+}
+.text-overlay p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 200px;
+  text-align: justify;
+}
